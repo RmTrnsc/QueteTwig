@@ -29,19 +29,21 @@
 
             {#----for loop----#}
 
-            <ul class="list-group list-group-horizontal mb-2">
-              {% for product in products|slice(0, 3) %}
-                <li class="list-group-item m-1">{{ product }}</li>
-              {% endfor %}
-            </ul>
+            <div class="container">
+              <div class="row justify-content-between">
 
-            <ul class="list-group list-group-horizontal">
-              {% for product in products|slice(3) %}
-                <li class="list-group-item m-1">{{ product }}</li>
-              {% endfor %}
-            </ul>
+                {% for product in products %}
+                  <div class="col-4">
+                    <div class="card" style="width:auto; margin-top: 2rem">
+                      <div class="card-body">
+                        <p class="card-text">{{ product }}</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
 
-            </ul class="list-group list-group-horizontal">
+              </div>
+            </div>
           </div>
         </div>
       </div>
