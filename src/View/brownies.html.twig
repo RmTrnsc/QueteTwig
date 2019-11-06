@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+  Les recettes - Brownies
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+
+    {#------------brownies------------#}
+
+    <div class="card m-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <h4 class="card-title m-2">Brownies</h4>
+          <img src="https://i.ytimg.com/vi/Biibg4EVOew/maxresdefault.jpg" class="card-img-top m-2" alt="brownies"
+               style="width: 350px; margin-bottom: 5rem">
+        </div>
+
+        {#---------ingredients--------#}
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Ingrédients</h5>
+
+            {#----for loop----#}
+
+            <ul class="list-group list-group-horizontal mb-2">
+              {% for product in products|slice(0, 3) %}
+                <li class="list-group-item m-1">{{ product }}</li>
+              {% endfor %}
+            </ul>
+
+            <ul class="list-group list-group-horizontal">
+              {% for product in products|slice(3) %}
+                <li class="list-group-item m-1">{{ product }}</li>
+              {% endfor %}
+            </ul>
+
+            </ul class="list-group list-group-horizontal">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+    "name": "romai/quete-twig",
+    "description": "quete twig",
+    "require": {
+        "twig/twig": "^2.12"
+    }
+}
