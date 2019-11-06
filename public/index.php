@@ -27,7 +27,7 @@ $twig = new Environment($loader);
 
 switch ($page) {
   case 'home':
-    echo $twig->render('base.html.twig');
+    echo $twig->render('index.html.twig');
     break;
   case 'poire_amandine':
     echo $twig->render('poire.html.twig', ['products' => $amandine]);
