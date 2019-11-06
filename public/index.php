@@ -1,5 +1,8 @@
 <?php
 
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+
 require '../vendor/autoload.php';
 
 /*---------ingredients-------*/
@@ -19,8 +22,8 @@ if (isset($_GET['p'])) {
 
 /*-------------render-------------*/
 
-$loader = new Twig\Loader\FilesystemLoader(__DIR__ . '\..\src\View');
-$twig = new Twig\Environment($loader);
+$loader = new FilesystemLoader(__DIR__ . '\..\src\View');
+$twig = new Environment($loader);
 
 switch ($page) {
   case 'home':
